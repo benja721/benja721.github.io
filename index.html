@@ -3,52 +3,376 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mijn eerste website - Benjamin</title>
+    <meta name="description" content="De eerste website van Benjamin: over mij, binair rekenen en RGB-kleurenmodellen.">
+    <title>Benjamin — mijn digitale wereld</title>
+
+    <!-- Link naar het aparte CSS-bestand -->
     <link rel="stylesheet" type="text/css" href="opmaak.css">
 </head>
 <body>
-    <!-- Dit is het bovenmenu van de website -->
-    <nav class="menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
 
-            <!-- Dit is het dropdownmenu met de twee onderwerpen -->
-            <li class="dropdown">
-                <a href="#">Onderwerpen ▾</a>
-                <ul class="dropdown-content">
-                    <li><a href="binairstelsel.html">Binair rekenen</a></li>
-                    <li><a href="kleurmodellen.html">Kleurenmodel</a></li>
-                </ul>
-            </li>
+    <!-- Link waarmee je direct naar de inhoud kunt gaan -->
+    <a class="skip-link" href="#inhoud">Ga naar de inhoud</a>
 
-            <li><a href="binairstelsel.html">Binair rekenen</a></li>
-            <li><a href="kleurmodellen.html">Kleurenmodel</a></li>
-        </ul>
-    </nav>
+    <!-- Het bovenmenu van de website -->
+    <header class="site-header">
+        <nav class="nav container-wide" aria-label="Hoofdnavigatie">
 
-    <!-- Dit is de inhoud van de homepage -->
-    <main class="container">
-        <h1>Mijn eerste website</h1>
+            <a class="brand" href="index.html">
+                <span class="brand-mark">B<span>.</span></span>
+                <span class="brand-name">
+                    BENJAMIN
+                    <span class="brand-caption">DIGITAL SPACE</span>
+                </span>
+            </a>
 
-        <img src="afbeeldingen/benjamin.jpg" alt="Foto van Benjamin" class="foto">
+            <ul class="nav-links">
+                <li>
+                    <a class="nav-link active" href="index.html">
+                        Home
+                    </a>
+                </li>
 
-        <h2>Over mij</h2>
-        <p>
-            Mijn naam is Benjamin, ik ben 15 jaar en woon in Zoeterwoude.
-            In mijn vrije tijd game ik graag. Ik doe niet aan sport.
-        </p>
+                <!-- Dropdownmenu met de twee onderwerpen -->
+                <li class="nav-dropdown">
+                    <details class="dropdown">
+                        <summary class="nav-link">
+                            Leerlab
+                            <span class="chevron" aria-hidden="true">⌄</span>
+                        </summary>
 
-        <p>
-            Deze website maak ik omdat het een opdracht voor school is.
-            Dit is mijn eerste website.
-        </p>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="binairstelsel.html">
+                                    <span class="dropdown-icon">01</span>
+                                    <span>
+                                        <strong>Binair rekenen</strong>
+                                        <small>Denken in nullen en enen</small>
+                                    </span>
+                                </a>
+                            </li>
 
-        <h2>Waar gaat deze website over?</h2>
-        <p>
-            Op deze website leg ik uit wat binair rekenen is en wat
-            een kleurenmodel is. Via het menu kun je naar de verschillende
-            pagina's gaan.
-        </p>
+                            <li>
+                                <a href="kleurmodellen.html">
+                                    <span class="dropdown-icon">02</span>
+                                    <span>
+                                        <strong>Kleurenmodel</strong>
+                                        <small>Hoe RGB kleur maakt</small>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="#over">Over mij</a>
+                </li>
+            </ul>
+
+            <a class="nav-cta" href="#onderwerpen">
+                Ontdek meer <span aria-hidden="true">↗</span>
+            </a>
+
+        </nav>
+    </header>
+
+    <main id="inhoud">
+
+        <!-- Introductie op de homepage -->
+        <section class="hero container-wide">
+
+            <div class="hero-copy">
+                <p class="eyebrow">
+                    <span class="status-dot"></span>
+                    MIJN EERSTE WEBSITE
+                    <span class="eyebrow-line"></span>
+                </p>
+
+                <h1>
+                    Hey, ik ben<br>
+                    <span class="gradient-text">Benjamin.</span>
+                </h1>
+
+                <p class="hero-lead">
+                    Welkom in mijn digitale wereld.
+                    Een plek over mij, binaire getallen en hoe schermen
+                    kleur laten zien.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#onderwerpen">
+                        Bekijk de onderwerpen <span aria-hidden="true">↓</span>
+                    </a>
+
+                    <a class="text-link" href="#over">
+                        Even kennismaken <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+
+                <div class="hero-meta">
+                    <span class="meta-line"></span>
+                    <span>HAVO 4</span>
+                    <span class="meta-separator">/</span>
+                    <span>HTML + CSS</span>
+                    <span class="meta-separator">/</span>
+                    <span>Zoeterwoude</span>
+                </div>
+            </div>
+
+            <!-- Decoratieve kaart met een eigen digitale illustratie -->
+            <div class="hero-art-wrap"
+                 aria-label="Digitale illustratie"
+                 role="img">
+
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="hero-glow"></div>
+
+                <div class="hero-art-card">
+
+                    <div class="art-card-top">
+                        <span class="window-dots">
+                            <i></i><i></i><i></i>
+                        </span>
+
+                        <span>benjamin.exe</span>
+                        <span class="live-label">ONLINE</span>
+                    </div>
+
+                    <img
+                        src="afbeeldingen/benjamin-visual.svg"
+                        alt="Digitale illustratie met de letter B"
+                    >
+
+                    <div class="art-card-bottom">
+                        <div>
+                            <span class="small-label">CURRENT MODE</span>
+                            <strong>Building my first site</strong>
+                        </div>
+
+                        <span class="sparkle">✳</span>
+                    </div>
+
+                </div>
+
+                <div class="floating-chip chip-top">
+                    <span class="chip-pip"></span>
+                    HTML <span class="chip-plus">+</span> CSS
+                </div>
+
+                <div class="floating-chip chip-bottom">
+                    <span class="binary-mini">01</span>
+                    learning by doing
+                </div>
+
+                <div class="hero-index">B / 001</div>
+            </div>
+
+        </section>
+
+        <!-- Balk met de onderwerpen van de website -->
+        <section class="ticker" aria-label="Websiteonderwerpen">
+            <div class="ticker-track">
+                <span>PERSONAL SPACE</span>
+                <b>✳</b>
+                <span>BINARY THINKING</span>
+                <b>✳</b>
+                <span>RGB COLOUR</span>
+                <b>✳</b>
+                <span>BUILT WITH HTML + CSS</span>
+                <b>✳</b>
+                <span>PERSONAL SPACE</span>
+                <b>✳</b>
+                <span>BINARY THINKING</span>
+                <b>✳</b>
+                <span>RGB COLOUR</span>
+            </div>
+        </section>
+
+        <!-- Kaarten waarmee je naar de verschillende pagina's gaat -->
+        <section class="section container-wide" id="onderwerpen">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">01 / DE INHOUD</p>
+                    <h2>
+                        Drie topics.<br>
+                        <span class="muted-heading">Eén kleine website.</span>
+                    </h2>
+                </div>
+
+                <p class="section-intro">
+                    Van wie ik ben naar hoe computers rekenen
+                    en kleuren opbouwen. Duik erin.
+                </p>
+            </div>
+
+            <div class="topic-grid">
+
+                <!-- Kaart over mij -->
+                <a class="topic-card topic-personal" href="#over">
+                    <div class="card-topline">
+                        <span class="card-number">01</span>
+                        <span class="card-arrow">↗</span>
+                    </div>
+
+                    <div class="personal-emblem">
+                        <span>B</span>
+                        <i></i><i></i><i></i>
+                    </div>
+
+                    <div class="topic-card-copy">
+                        <p class="card-kicker">THE PERSON</p>
+                        <h3>Over mij</h3>
+                        <p>
+                            Maak kennis met Benjamin, de maker
+                            achter deze website.
+                        </p>
+                        <span class="card-cta">
+                            Meer over mij <b>→</b>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Kaart over binair rekenen -->
+                <a class="topic-card topic-binary"
+                   href="binairstelsel.html">
+
+                    <div class="card-topline">
+                        <span class="card-number">02</span>
+                        <span class="card-arrow">↗</span>
+                    </div>
+
+                    <div class="binary-art">
+                        <img
+                            src="afbeeldingen/binair-visual.svg"
+                            alt="Illustratie met binaire cijfers"
+                        >
+                    </div>
+
+                    <div class="topic-card-copy">
+                        <p class="card-kicker">THE LOGIC</p>
+                        <h3>Binair rekenen</h3>
+                        <p>
+                            Ontdek hoe je met alleen 0 en 1
+                            getallen kunt maken.
+                        </p>
+                        <span class="card-cta">
+                            Ontdek binair <b>→</b>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Kaart over het RGB-kleurenmodel -->
+                <a class="topic-card topic-colour"
+                   href="kleurmodellen.html">
+
+                    <div class="card-topline">
+                        <span class="card-number">03</span>
+                        <span class="card-arrow">↗</span>
+                    </div>
+
+                    <div class="rgb-art">
+                        <img
+                            src="afbeeldingen/rgb-visual.svg"
+                            alt="Illustratie van RGB-kleuren"
+                        >
+                    </div>
+
+                    <div class="topic-card-copy">
+                        <p class="card-kicker">THE COLOUR</p>
+                        <h3>Kleurenmodel</h3>
+                        <p>
+                            Leer hoe rood, groen en blauw samen
+                            kleur op een scherm maken.
+                        </p>
+                        <span class="card-cta">
+                            Ontdek RGB <b>→</b>
+                        </span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Persoonlijke informatie over Benjamin -->
+        <section class="about-section" id="over">
+            <div class="about-inner container-wide">
+
+                <div class="about-stamp">
+                    <span>ABOUT</span>
+                    <strong>B.</strong>
+                    <span>EST. 2026</span>
+                </div>
+
+                <div class="about-copy">
+                    <p class="eyebrow">02 / ACHTER HET SCHERM</p>
+
+                    <h2>
+                        Niet ingewikkeld.<br>
+                        <span class="gradient-text">Gewoon mezelf.</span>
+                    </h2>
+
+                    <p>
+                        Mijn naam is Benjamin, ik ben 15 jaar en woon
+                        in Zoeterwoude. In mijn vrije tijd game ik graag.
+                        Sport is niet echt mijn ding; slapen hoort er
+                        natuurlijk ook bij.
+                    </p>
+
+                    <p>
+                        Deze website is een schoolopdracht en mijn
+                        eerste stap met HTML en CSS. Ik heb geprobeerd
+                        er meteen mijn eigen stijl aan te geven.
+                    </p>
+
+                    <div class="about-tags">
+                        <span>15 jaar</span>
+                        <span>Gamen 🎮</span>
+                        <span>HAVO 4</span>
+                        <span>First website</span>
+                    </div>
+                </div>
+
+                <div class="about-side-note">
+                    <span class="side-line"></span>
+                    <span>MADE FOR SCHOOL.<br>STYLED MY WAY.</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Afsluitend onderdeel met een link naar de volgende pagina -->
+        <section class="closing-cta container-wide">
+            <div>
+                <p class="eyebrow">READY TO EXPLORE?</p>
+                <h2>
+                    Let's get <span class="gradient-text">digital.</span>
+                </h2>
+            </div>
+
+            <a class="round-link"
+               href="binairstelsel.html"
+               aria-label="Ga naar binair rekenen">↗</a>
+        </section>
+
     </main>
+
+    <!-- Voettekst -->
+    <footer class="site-footer">
+        <div class="container-wide footer-inner">
+            <a class="footer-brand" href="index.html">
+                B<span>.</span> / BENJAMIN
+            </a>
+
+            <p>Eerste website · HAVO 4 · 2026</p>
+
+            <a href="#inhoud" class="back-top">
+                Terug naar boven ↑
+            </a>
+        </div>
+    </footer>
+
 </body>
 </html>
