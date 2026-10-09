@@ -1,0 +1,144 @@
+/* Dit bestand bepaalt de opmaak van alle pagina's */
+
+/* Algemene opmaak van de hele website */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #eeeeee;
+    line-height: 1.6;
+}
+
+/* De inhoud van de pagina krijgt een maximale breedte */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 25px 40px;
+}
+
+/* Opmaak van de koppen */
+h1 {
+    margin-top: 0;
+    font-size: 36px;
+}
+
+h2 {
+    margin-top: 35px;
+    font-size: 25px;
+}
+
+/* Opmaak van gewone tekst */
+p {
+    font-size: 18px;
+}
+
+/* Afbeelding op de homepage */
+.foto {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0 30px;
+    border-radius: 12px;
+}
+
+/* Afbeeldingen op de onderwerp-pagina's */
+.onderwerp-foto {
+    display: block;
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0 30px;
+    border-radius: 12px;
+}
+
+/* Het bovenmenu */
+.menu {
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333333;
+}
+
+/* De lijst van het menu */
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Ieder onderdeel van het menu */
+.menu li {
+    position: relative;
+}
+
+/* De links in het menu */
+.menu a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 18px;
+}
+
+/* De kleur verandert als je over een menu-link gaat */
+.menu a:hover {
+    background-color: #333333;
+}
+
+/* Het dropdownmenu staat eerst verborgen */
+.dropdown-content {
+    display: none !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 190px;
+    background-color: #1e1e1e;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    flex-direction: column;
+}
+
+/* Het dropdownmenu wordt zichtbaar als je eroverheen gaat */
+.dropdown:hover .dropdown-content {
+    display: flex !important;
+}
+
+/* De onderdelen van het dropdownmenu */
+.dropdown-content li {
+    width: 100%;
+}
+
+/* Een opvallend voorbeeld */
+.voorbeeld {
+    background-color: #1e1e1e;
+    border-left: 4px solid #777777;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+/* Link terug naar de homepage */
+.terug-link {
+    display: inline-block;
+    margin-top: 25px;
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #555555;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+/* Opmaak als je over de teruglink gaat */
+.terug-link:hover {
+    background-color: #333333;
+}
+
+/* Op kleinere schermen wordt het menu onder elkaar gezet */
+@media (max-width: 700px) {
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+    }
+}
