@@ -1,0 +1,99 @@
+<!DOCTYPE html> <!-- pagina: Invoer, verwerking, uitvoer -->
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invoer, verwerking, uitvoer | Benjamin</title>
+  <link rel="stylesheet" type="text/css" href="opmaak.css">
+</head>
+<body>
+
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="overmij.html">Over mij</a></li>
+      <li class="dropdown actief"><a href="#">Informatica &#9662;</a>
+        <ul class="submenu">
+          <li><a href="ivo.html">Invoer, verwerking, uitvoer</a></li>
+          <li><a href="binairstelsel.html">Binair stelsel</a></li>
+          <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
+          <li><a href="compressie.html">Compressie</a></li>
+        </ul>
+      </li>
+      <li><a href="ai.html">AI</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="hero">
+      <p class="label">Informatica &middot; 1</p>
+      <h1>Invoer, verwerking, uitvoer</h1>
+      <p>Elke computer werkt in drie stappen: er gaat iets in, de computer doet er iets mee en er komt iets uit.</p>
+    </div>
+
+    <!-- de drie stappen naast elkaar, met pijltjes ertussen -->
+    <div class="stroom">
+      <div class="stap">
+        <h3>1. Invoer</h3>
+        <p>Gegevens gaan de computer in. Voorbeelden: toetsenbord, muis, microfoon, camera, touchscreen.</p>
+      </div>
+      <div class="pijl">&rarr;</div>
+      <div class="stap">
+        <h3>2. Verwerking</h3>
+        <p>De processor (CPU) voert de opdracht uit. Hij gebruikt daarbij het werkgeheugen.</p>
+      </div>
+      <div class="pijl">&rarr;</div>
+      <div class="stap">
+        <h3>3. Uitvoer</h3>
+        <p>Het resultaat komt naar buiten. Voorbeelden: scherm, speakers, printer.</p>
+      </div>
+    </div>
+
+    <div class="blok">
+      <h2>Een voorbeeld</h2>
+      <p>Ik druk op een toets op mijn toetsenbord. Dat is de <b>invoer</b>. De computer verwerkt dat signaal en snapt welke letter ik bedoel. Dat is de <b>verwerking</b>. De letter verschijnt op mijn scherm. Dat is de <b>uitvoer</b>.</p>
+      <p>Wil je iets bewaren, dan gaat het naar de opslag, bijvoorbeeld een harde schijf of SSD. Daar blijven je bestanden staan, ook als de computer uit is.</p>
+    </div>
+
+    <!-- zelf proberen: een kleine rekenmachine in drie stappen -->
+    <div class="blok">
+      <h2>Probeer het zelf</h2>
+      <p><b>Invoer:</b> kies twee getallen.</p>
+      <input type="number" id="getal1" value="7"> +
+      <input type="number" id="getal2" value="5">
+      <button class="knop" id="rekenknop" type="button">Bereken</button>
+      <p><b>Uitvoer:</b> <span class="uitvoer" id="uitvoer">-</span></p>
+    </div>
+
+    <div class="blok">
+      <h2>Video</h2>
+      <p>Klik op de afbeelding om de video te bekijken: <i>How Computers Work</i>.</p>
+      <a class="video" href="https://www.youtube.com/watch?v=mCq8-xTH7jA" target="_blank">
+        <img src="https://img.youtube.com/vi/mCq8-xTH7jA/hqdefault.jpg" alt="Video: How Computers Work">
+      </a>
+      <!-- TODO: schrijf hier in je eigen woorden 2 of 3 zinnen over wat je in de video leerde -->
+      <p>[Vul hier in wat je van de video hebt geleerd.]</p>
+    </div>
+
+    <a class="knop" href="binairstelsel.html">Volgende: binair stelsel &rarr;</a>
+  </main>
+
+  <footer>
+    <p>Gemaakt door Benjamin &middot; informatica HAVO 4</p>
+  </footer>
+
+  <script>
+    // Als er op de knop wordt geklikt, volgen de drie stappen:
+    document.getElementById('rekenknop').onclick = function () {
+      // 1. INVOER: de getallen uit de invoervelden halen
+      var a = Number(document.getElementById('getal1').value);
+      var b = Number(document.getElementById('getal2').value);
+      // 2. VERWERKING: de computer telt de getallen op
+      var som = a + b;
+      // 3. UITVOER: het resultaat op het scherm zetten
+      document.getElementById('uitvoer').textContent = a + ' + ' + b + ' = ' + som;
+    };
+  </script>
+
+</body>
+</html>
