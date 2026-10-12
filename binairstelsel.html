@@ -1,0 +1,143 @@
+<!DOCTYPE html> <!-- pagina: Binair stelsel -->
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Binair stelsel | Benjamin</title>
+  <link rel="stylesheet" type="text/css" href="opmaak.css">
+</head>
+<body>
+
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="overmij.html">Over mij</a></li>
+      <li class="dropdown actief"><a href="#">Informatica &#9662;</a>
+        <ul class="submenu">
+          <li><a href="ivo.html">Invoer, verwerking, uitvoer</a></li>
+          <li><a href="binairstelsel.html">Binair stelsel</a></li>
+          <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
+          <li><a href="compressie.html">Compressie</a></li>
+        </ul>
+      </li>
+      <li><a href="ai.html">AI</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="hero">
+      <p class="label">Informatica &middot; 2</p>
+      <h1>Binair stelsel</h1>
+      <p>Een computer kent maar twee cijfers: 0 en 1. Alles wat hij doet, van tekst tot video, bestaat uit rijtjes nullen en enen.</p>
+    </div>
+
+    <div class="kolommen">
+      <div class="blok">
+        <h2>Decimaal</h2>
+        <p>Wij tellen met 10 cijfers (0 t/m 9). Elke plek is 10 keer zoveel waard als de plek rechts ervan: eenheden, tientallen, honderdtallen.</p>
+      </div>
+      <div class="blok">
+        <h2>Binair</h2>
+        <p>Een computer telt met 2 cijfers (0 en 1). Elke plek is 2 keer zoveel waard als de plek rechts ervan: 1, 2, 4, 8, 16, enzovoort.</p>
+      </div>
+    </div>
+
+    <div class="blok">
+      <h2>Bit en byte</h2>
+      <p>Een <b>bit</b> is 1 cijfer: een 0 of een 1. Een <b>byte</b> is 8 bits. Met 8 bits heb je 2<sup>8</sup> = 256 verschillende waardes (0 t/m 255).</p>
+    </div>
+
+    <div class="blok">
+      <h2>Voorbeeld: 1011</h2>
+      <p>Het binaire getal <span class="uitvoer">1011</span> is in ons stelsel <b>11</b>:</p>
+      <p class="uitvoer">1 &times; 8 + 0 &times; 4 + 1 &times; 2 + 1 &times; 1 = 11</p>
+      <p>Andersom werkt het zo (11 omzetten naar binair): ik zoek steeds de grootste macht van 2 die nog past.</p>
+      <p>8 past in 11 (rest 3), 4 past niet in 3, 2 past in 3 (rest 1) en 1 past in 1. Dat geeft 1, 0, 1, 1.</p>
+      <p>Ik schrijf binaire getallen altijd in groepjes van 4, dus 0010 en niet 010.</p>
+    </div>
+
+    <!-- zelf proberen: klik op de bits om ze aan of uit te zetten -->
+    <div class="blok">
+      <h2>Probeer zelf: klik op de bits</h2>
+      <p>Klik op een vakje om een bit aan (1) of uit (0) te zetten. De waarde boven het vakje telt mee als het vakje op 1 staat.</p>
+      <div class="bits">
+        <div class="bitkolom">128<br><button type="button" class="bit">0</button></div>
+        <div class="bitkolom">64<br><button type="button" class="bit">0</button></div>
+        <div class="bitkolom">32<br><button type="button" class="bit">0</button></div>
+        <div class="bitkolom">16<br><button type="button" class="bit">0</button></div>
+        <div class="bitkolom">8<br><button type="button" class="bit">0</button></div>
+        <div class="bitkolom">4<br><button type="button" class="bit">0</button></div>
+        <div class="bitkolom">2<br><button type="button" class="bit">0</button></div>
+        <div class="bitkolom">1<br><button type="button" class="bit">0</button></div>
+      </div>
+      <p>Binair: <span class="uitvoer" id="bin-uit">0000 0000</span></p>
+      <p>Decimaal: <span class="uitvoer" id="dec-uit">0</span></p>
+    </div>
+
+    <div class="blok">
+      <h2>Hexadecimaal</h2>
+      <p>Naast binair en decimaal bestaat er ook <b>hexadecimaal</b> met 16 cijfers: 0 t/m 9 en A t/m F. Dit gebruikt een computer onder andere voor kleurcodes. Zo is FF in hexadecimaal 255 in ons stelsel. Meer hierover staat op de pagina Kleurmodellen.</p>
+    </div>
+
+    <!-- het spel: een link in een blok. Het spel opent in een nieuw tabblad -->
+    <div class="blok">
+      <h2>Oefenen met Binary Bonanza</h2>
+      <p>Speel een aantal levels van het spel om binair te oefenen.</p>
+      <a class="knop" href="https://games.penjee.com/binary-bonanza/" target="_blank">Speel Binary Bonanza</a>
+    </div>
+
+    <div class="blok">
+      <h2>Video</h2>
+      <!-- TODO: zoek een korte video over het binaire stelsel en vervang JOUW_VIDEO_ID op 3 plekken.
+           Het ID staat in de YouTube-link na v= (bijvoorbeeld youtube.com/watch?v=ABC123 geeft ABC123). -->
+      <a class="video" href="https://www.youtube.com/watch?v=JOUW_VIDEO_ID" target="_blank">
+        <img src="https://img.youtube.com/vi/JOUW_VIDEO_ID/hqdefault.jpg" alt="Video over het binaire stelsel">
+      </a>
+      <p>[Vul hier in wat je van de video hebt geleerd.]</p>
+    </div>
+
+    <a class="knop" href="ivo.html">&larr; Vorige</a>
+    <a class="knop" href="kleurmodellen.html">Volgende: kleurmodellen &rarr;</a>
+  </main>
+
+  <footer>
+    <p>Gemaakt door Benjamin &middot; informatica HAVO 4</p>
+  </footer>
+
+  <script>
+    // Alle bit-knoppen ophalen
+    var knoppen = document.querySelectorAll('.bit');
+
+    // Deze functie telt de waardes van de bits die aan staan bij elkaar op
+    function update() {
+      var totaal = 0;
+      var tekst = '';
+      for (var i = 0; i < knoppen.length; i++) {
+        var aan = knoppen[i].classList.contains('aan');
+        if (aan) {
+          totaal = totaal + Number(knoppen[i].getAttribute('data-waarde'));
+        }
+        tekst = tekst + (aan ? '1' : '0');
+        if (i === 3) {
+          tekst = tekst + ' '; // groepjes van 4
+        }
+      }
+      document.getElementById('bin-uit').textContent = tekst;
+      document.getElementById('dec-uit').textContent = totaal;
+    }
+
+    // Bij elke knop de waarde (128, 64, ... 1) opslaan en een klik-actie toevoegen
+    var waardes = [128, 64, 32, 16, 8, 4, 2, 1];
+    for (var i = 0; i < knoppen.length; i++) {
+      knoppen[i].setAttribute('data-waarde', waardes[i]);
+      knoppen[i].onclick = function () {
+        this.classList.toggle('aan'); // bit aan of uit
+        this.textContent = this.classList.contains('aan') ? '1' : '0';
+        update();
+      };
+    }
+    update();
+  </script>
+
+</body>
+</html>
