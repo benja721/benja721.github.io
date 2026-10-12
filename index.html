@@ -1,195 +1,91 @@
-<!DOCTYPE html>
-<html lang="nl">
+<!DOCTYPE html> <!-- dit is de homepage van mijn site -->
+<html lang="nl"> <!-- het html-element: alles van de pagina staat hierin. lang="nl" = Nederlands -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benjamin — Informatica</title>
-    <link rel="stylesheet" href="opmaak.css">
+  <meta charset="utf-8"> <!-- zorgt dat tekens zoals é en ë goed worden getoond -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- pagina past zich aan op een telefoon -->
+  <title>Benjamin | Informatica</title> <!-- de titel die in het tabblad staat -->
+  <link rel="stylesheet" type="text/css" href="opmaak.css"> <!-- koppelt het CSS-bestand aan deze pagina -->
 </head>
 <body>
-    <!-- Bovenmenu dat op alle pagina's terugkomt -->
-    <header class="header">
-        <nav class="wrap nav">
-            <a class="logo" href="index.html">B<span>/</span></a>
 
-            <ul class="nav-links">
-                <li><a class="active" href="index.html">Home</a></li>
-                <li class="drop">
-                    <details>
-                        <summary>Onderwerpen <span>⌄</span></summary>
-                        <div class="drop-menu">
-                            <a href="invoer-verwerking-uitvoer.html">Invoer / verwerking / uitvoer</a>
-                            <a href="binairstelsel.html">Binair stelsel</a>
-                            <a href="kleurmodellen.html">Kleurmodellen</a>
-                            <a href="compressie.html">Compressie</a>
-                            <a href="ai.html">AI</a>
-                        </div>
-                    </details>
-                </li>
-                <li><a href="#over">Over mij</a></li>
-            </ul>
+  <!-- MENU: een lijst (ul) met links. Het menu staat op elke pagina hetzelfde. -->
+  <nav>
+    <ul class="menu">
+      <li class="actief"><a href="index.html">Home</a></li> <!-- class="actief" = de pagina waar je nu bent -->
+      <li><a href="overmij.html">Over mij</a></li>
+      <!-- DROPDOWNMENU: een tweede ul zit binnen een li van het hoofdmenu -->
+      <li class="dropdown"><a href="#">Informatica &#9662;</a>
+        <ul class="submenu">
+          <li><a href="ivo.html">Invoer, verwerking, uitvoer</a></li>
+          <li><a href="binairstelsel.html">Binair stelsel</a></li>
+          <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
+          <li><a href="compressie.html">Compressie</a></li>
+        </ul>
+      </li>
+      <li><a href="ai.html">AI</a></li>
+    </ul>
+  </nav>
 
-            <span class="nav-label">HAVO 4 · 2026</span>
-        </nav>
-    </header>
+  <main>
 
-    <main>
-        <!-- Introductie -->
-        <section class="hero wrap">
-            <div class="hero-copy">
-                <p class="eyebrow"><span class="dot"></span> MIJN EERSTE WEBSITE</p>
-                <h1>Benjamin.<br><span>Dit is mijn</span><br>digitale wereld.</h1>
-                <p class="intro">
-                    Een website over mij en de techniek achter computers.
-                    Van nullen en enen tot pixels, compressie en kunstmatige
-                    intelligentie.
-                </p>
+    <!-- HERO: grote titel met een korte introductie en twee knoppen -->
+    <div class="hero">
+      <p class="label">Informatica &middot; mijn eerste website</p> <!-- p = paragraaf -->
+      <h1>Hoi, ik ben Benjamin.</h1> <!-- h1 = de belangrijkste kop van de pagina -->
+      <p>Welkom op mijn website. Ik heb hem gemaakt voor informatica. Hier leg ik uit hoe een computer werkt: van enen en nullen tot kleuren, compressie en AI.</p>
+      <!-- knoppen: links (a) met class="knop" zodat CSS ze als knop opmaakt -->
+      <a class="knop" href="ivo.html">Begin met leren</a>
+      <a class="knop" href="overmij.html">Over mij</a>
+    </div>
 
-                <div class="actions">
-                    <a class="button" href="#onderwerpen">Bekijk de onderwerpen ↓</a>
-                    <a class="text-link" href="#over">Over mij ↗</a>
-                </div>
+    <h2>Wat kun je hier vinden?</h2>
 
-                <div class="facts">
-                    <span>15 JAAR</span><span>ZOETERWOUDE</span><span>HAVO 4</span>
-                </div>
-            </div>
+    <!-- KAARTEN: elke kaart is een div (block-element) met een kop, tekst en een link.
+         Een div is een container; het raster staat in de CSS (.kaarten). -->
+    <div class="kaarten">
+      <div class="kaart">
+        <h3>Over mij</h3>
+        <p>Wie ben ik, waar woon ik en wat doe ik in mijn vrije tijd?</p>
+        <a href="overmij.html">Lees meer</a>
+      </div>
+      <div class="kaart">
+        <h3>Invoer, verwerking, uitvoer</h3>
+        <p>Hoe een computer gegevens krijgt, verwerkt en laat zien.</p>
+        <a href="ivo.html">Lees meer</a>
+      </div>
+      <div class="kaart">
+        <h3>Binair stelsel</h3>
+        <p>Rekenen met alleen 0 en 1. Met een spel om te oefenen.</p>
+        <a href="binairstelsel.html">Lees meer</a>
+      </div>
+      <div class="kaart">
+        <h3>Kleurmodellen</h3>
+        <p>RGB voor schermen en CMYK voor printers.</p>
+        <a href="kleurmodellen.html">Lees meer</a>
+      </div>
+      <div class="kaart">
+        <h3>Compressie</h3>
+        <p>Bitmap en vector, en hoe bestanden kleiner worden.</p>
+        <a href="compressie.html">Lees meer</a>
+      </div>
+      <div class="kaart">
+        <h3>AI</h3>
+        <p>Wat is kunstmatige intelligentie en waar zit het in mijn leven?</p>
+        <a href="ai.html">Lees meer</a>
+      </div>
+    </div>
 
-            <div class="hero-art">
-                <div class="art-label"><span>BENJAMIN / 001</span><span>ONLINE</span></div>
-                <img src="afbeeldingen/benjamin.svg" alt="Grafische B met een pixelraster">
-                <div class="art-caption">GEBOUWD MET HTML + CSS</div>
-            </div>
-        </section>
+    <!-- BLOK: uitleg over de website zelf -->
+    <div class="blok">
+      <h2>Over deze website</h2>
+      <p>Dit is mijn eerste website. Ik heb hem gemaakt met HTML (de structuur) en CSS (de opmaak) en hij staat op GitHub Pages. Elke pagina heeft hetzelfde menu en gebruikt hetzelfde CSS-bestand, zodat alles er hetzelfde uitziet.</p>
+    </div>
 
-        <div class="marquee">
-            <div class="marquee-inner">
-                <span>INPUT / PROCESS / OUTPUT</span><b>✳</b>
-                <span>BINARY</span><b>✳</b>
-                <span>RGB</span><b>✳</b>
-                <span>COMPRESSION</span><b>✳</b>
-                <span>ARTIFICIAL INTELLIGENCE</span>
-            </div>
-        </div>
+  </main>
 
-        <!-- Kaarten naar de vijf onderwerpen -->
-        <section class="section wrap" id="onderwerpen">
-            <div class="section-heading">
-                <div>
-                    <p class="eyebrow">01 / DE INHOUD</p>
-                    <h2>Wat zit er<br>achter het scherm?</h2>
-                </div>
-                <p>
-                    Vijf onderwerpen uit de les. Elke pagina heeft uitleg,
-                    voorbeelden en een video.
-                </p>
-            </div>
+  <footer>
+    <p>Gemaakt door Benjamin &middot; informatica HAVO 4</p>
+  </footer>
 
-            <div class="cards">
-                <a class="topic-card" href="invoer-verwerking-uitvoer.html">
-                    <div class="card-head"><span>01</span><span>↗</span></div>
-                    <img src="afbeeldingen/io.svg" alt="Schema van invoer, verwerking en uitvoer">
-                    <p class="category">DE BASIS</p>
-                    <h3>Invoer, verwerking, uitvoer</h3>
-                    <p>Hoe een computer gegevens omzet in een resultaat.</p>
-                    <span class="card-bottom">BEKIJK PAGINA →</span>
-                </a>
-
-                <a class="topic-card" href="binairstelsel.html">
-                    <div class="card-head"><span>02</span><span>↗</span></div>
-                    <img src="afbeeldingen/binair.svg" alt="Binaire cijfers">
-                    <p class="category">GETALLEN</p>
-                    <h3>Binair stelsel</h3>
-                    <p>Rekenen met maar twee cijfers: 0 en 1.</p>
-                    <span class="card-bottom">BEKIJK PAGINA →</span>
-                </a>
-
-                <a class="topic-card" href="kleurmodellen.html">
-                    <div class="card-head"><span>03</span><span>↗</span></div>
-                    <img src="afbeeldingen/rgb.svg" alt="Rood, groen en blauw licht">
-                    <p class="category">BEELD</p>
-                    <h3>Kleurmodellen</h3>
-                    <p>Hoe schermen en printers kleuren weergeven.</p>
-                    <span class="card-bottom">BEKIJK PAGINA →</span>
-                </a>
-
-                <a class="topic-card" href="compressie.html">
-                    <div class="card-head"><span>04</span><span>↗</span></div>
-                    <img src="afbeeldingen/compressie.svg" alt="Illustratie van pixels en compressie">
-                    <p class="category">BESTANDEN</p>
-                    <h3>Compressie</h3>
-                    <p>Bitmap, vector en bestanden kleiner maken.</p>
-                    <span class="card-bottom">BEKIJK PAGINA →</span>
-                </a>
-
-                <a class="topic-card" href="ai.html">
-                    <div class="card-head"><span>05</span><span>↗</span></div>
-                    <img src="afbeeldingen/ai.svg" alt="Illustratie van een AI-chip">
-                    <p class="category">TECHNOLOGIE</p>
-                    <h3>Kunstmatige intelligentie</h3>
-                    <p>AI in schoolwerk en op een smartphone.</p>
-                    <span class="card-bottom">BEKIJK PAGINA →</span>
-                </a>
-            </div>
-        </section>
-
-        <!-- Persoonlijke introductie -->
-        <section class="about" id="over">
-            <div class="wrap about-inner">
-                <div class="about-mark">B<span>/</span></div>
-                <div>
-                    <p class="eyebrow">02 / OVER MIJ</p>
-                    <h2>Even kennismaken.</h2>
-                    <p>
-                        Mijn naam is Benjamin, ik ben 15 jaar en woon in
-                        Zoeterwoude. In mijn vrije tijd game ik graag.
-                        Sport is niet echt mijn ding en slapen hoort er
-                        natuurlijk ook bij.
-                    </p>
-                    <p>
-                        Ik maak deze website voor informatica op HAVO 4.
-                        Het is mijn eerste website, dus ik leer hoe HTML
-                        de inhoud maakt en CSS de opmaak regelt.
-                    </p>
-                    <div class="tags"><span>GAMEN</span><span>HAVO 4</span><span>EERSTE WEBSITE</span></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Algemene video over computers -->
-        <section class="section wrap">
-            <div class="video-layout">
-                <div class="video-text">
-                    <p class="eyebrow">03 / KIJK MEE</p>
-                    <h2>What makes a computer a computer?</h2>
-                    <p>
-                        Deze video geeft een algemene introductie tot computers.
-                        Hij past bij de website omdat de vijf pagina's laten zien
-                        hoe computers gegevens, afbeeldingen en informatie verwerken.
-                    </p>
-                    <p class="note">
-                        Bekijk de video zelf voordat je de website inlevert en pas
-                        deze toelichting aan als je iets anders interessant vond.
-                    </p>
-                </div>
-                <div class="video-frame">
-                    <iframe
-                        src="https://www.youtube-nocookie.com/embed/mCq8-xTH7jA"
-                        title="How Computers Work: What Makes a Computer, a Computer?"
-                        loading="lazy"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="wrap footer-inner">
-            <a class="footer-logo" href="index.html">B<span>/</span></a>
-            <span>Benjamin · Informatica · 2026</span>
-            <a href="#top">Terug naar boven ↑</a>
-        </div>
-    </footer>
 </body>
 </html>
