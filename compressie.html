@@ -1,129 +1,137 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Uitleg over bitmap, vector en lossy en lossless compressie.">
-  <title>Compressie | Benjamin</title>
-  <!-- Alle pagina's gebruiken hetzelfde CSS-bestand -->
-  <link rel="stylesheet" href="opmaak.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compressie — Benjamin</title>
+    <link rel="stylesheet" href="opmaak.css">
 </head>
 <body id="top">
-    <!-- Hoofdnavigatie: de onderwerpen staan in een dropdownmenu -->
-    <header class="site-header">
-      <nav class="nav shell" aria-label="Hoofdnavigatie">
-        <a class="brand" href="index.html" aria-label="Benjamin, naar home"><span class="brand-mark">B<span>.</span></span><span><strong>BENJAMIN</strong><small>HAVO 4 / INFORMATICA</small></span></a>
-        <ul class="nav-main">
-          <li><a class="nav-home" href="index.html">Home</a></li>
-          <li class="nav-drop">
-            <details class="dropdown">
-              <summary>Onderwerpen <span aria-hidden="true">⌄</span></summary>
-              <ul class="dropdown-menu">
-                    <li><a href="invoer-verwerking-uitvoer.html">Invoer · verwerking · uitvoer</a></li>
-                    <li><a href="binairstelsel.html">Binair stelsel</a></li>
-                    <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
-                    <li><a href="compressie.html" aria-current="page">Compressie</a></li>
-                    <li><a href="ai.html">AI</a></li>
-              </ul>
-            </details>
-          </li>
-        </ul>
-        <a class="nav-note" href="index.html#over">Over deze site <span aria-hidden="true">↗</span></a>
-      </nav>
+    <!-- Hetzelfde bovenmenu op iedere pagina -->
+    <header class="header">
+        <nav class="wrap nav">
+            <a class="logo" href="index.html">B<span>/</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="drop">
+                    <details>
+                        <summary>Onderwerpen <span>⌄</span></summary>
+                        <div class="drop-menu">
+                            <a href="invoer-verwerking-uitvoer.html">Invoer / verwerking / uitvoer</a>
+                            <a href="binairstelsel.html">Binair stelsel</a>
+                            <a href="kleurmodellen.html">Kleurmodellen</a>
+                            <a href="compressie.html">Compressie</a>
+                            <a href="ai.html">AI</a>
+                        </div>
+                    </details>
+                </li>
+                <li><a href="index.html#over">Over mij</a></li>
+            </ul>
+            <span class="nav-label">ONDERWERP 04</span>
+        </nav>
     </header>
-  <main>
-    <section class="page-hero shell"><div><p class="overline"><span class="live-dot"></span> ONDERWERP 04</p><h1>Klein bestand.<br><span>Scherp beeld.</span></h1><p class="hero-lead">Afbeeldingen kunnen worden opgeslagen als bitmap of vector. Compressie helpt om minder opslagruimte te gebruiken.</p><div class="hero-actions"><a class="button button-lime" href="#verschil">Zie het verschil ↓</a></div></div><div class="page-art"><img src="afbeeldingen/compressie.svg" alt="Pixelraster wordt kleiner weergegeven"><span class="art-caption">PIXELS / PATHS / FILE SIZE</span></div></section>
 
-    <section class="section shell" id="verschil"><div class="section-head"><div><p class="overline">01 / TWEE SOORTEN</p><h2>Bitmap vs. vector.</h2></div><p class="section-intro">Ze kunnen allebei afbeeldingen tonen, maar ze slaan die informatie op een andere manier op.</p></div>
-      <div class="compare-grid"><article class="compare-card"><div class="compare-art bitmap-art"><span class="pixel pixel-a"></span><span class="pixel pixel-b"></span><span class="pixel pixel-c"></span><span class="pixel pixel-d"></span><span class="pixel pixel-e"></span><span class="pixel pixel-f"></span><span class="pixel pixel-g"></span><span class="pixel pixel-h"></span><span class="pixel pixel-i"></span></div><span class="card-tag">BITMAP / RASTER</span><h3>Opgebouwd uit pixels</h3><p>Een bitmapafbeelding bestaat uit een raster van gekleurde pixels. Foto's zijn meestal bitmaps. Als je ver inzoomt, zie je de losse pixels.</p><p class="format-line">VOORBEELDEN <b>JPG · PNG · WEBP</b></p></article><article class="compare-card"><div class="compare-art vector-art"><svg viewBox="0 0 240 135" role="img" aria-label="Scherpe cirkel als vector"><circle cx="120" cy="67" r="44" fill="none" stroke="#d8ff00" stroke-width="8"/><path d="M120 23V111M76 67H164" stroke="#d8ff00" stroke-opacity=".35" stroke-width="1.5"/><circle cx="120" cy="67" r="5" fill="#d8ff00"/></svg></div><span class="card-tag">VECTOR</span><h3>Opgebouwd uit vormen</h3><p>Vectorafbeeldingen beschrijven lijnen, vormen en curves met wiskundige informatie. Je kunt ze groter maken zonder dat de randen blokkerig worden.</p><p class="format-line">VOORBEELDEN <b>SVG · AI · EPS</b></p></article></div>
-    </section>
+    <main>
+        <section class="page-hero wrap">
+            <div>
+                <p class="eyebrow"><span class="dot"></span> AFBEELDINGEN EN BESTANDEN</p>
+                <h1>Kleiner bestand.<br><span>Zelfde doel.</span></h1>
+                <p class="intro">
+                    Compressie verkleint bestanden. Bitmap en vector zijn twee
+                    manieren waarop digitale afbeeldingen kunnen worden opgeslagen.
+                </p>
+            </div>
+            <div class="page-art">
+                <img src="afbeeldingen/compressie.svg" alt="Pixels worden weergegeven als een compacter patroon">
+                <p>PIXELS / VECTOR / DATA</p>
+            </div>
+        </section>
 
-    <section class="example-band"><div class="shell example-layout"><div><p class="overline">02 / COMPRESSIE</p><h2>Minder bytes, minder ruimte.</h2><p>Compressie verkleint de hoeveelheid data in een bestand. Dat kan helpen om bestanden sneller te versturen en pagina's sneller te laden.</p></div><div class="compression-types"><article><span>LOSSLESS</span><h3>Geen gegevens kwijt</h3><p>Na het uitpakken krijg je precies dezelfde gegevens terug. PNG is een veelgebruikt voorbeeld bij afbeeldingen.</p></article><article><span>LOSSY</span><h3>Een deel verdwijnt</h3><p>Er wordt informatie weggelaten om het bestand kleiner te maken. Bij JPEG kan daardoor kwaliteit verloren gaan.</p></article></div></div></section>
+        <section class="section wrap">
+            <div class="section-heading">
+                <div><p class="eyebrow">01 / TWEE SOORTEN</p><h2>Bitmap of vector?</h2></div>
+                <p>Beide kunnen een afbeelding tonen, maar ze bewaren de afbeelding op een andere manier.</p>
+            </div>
 
-    <!-- Ingesloten YouTube-video bij dit onderwerp -->
-    <section class="video-section shell">
-      <div class="section-kicker">KIJK / BEGRIJP</div>
-      <div class="video-layout">
-        <div class="video-copy">
-          <p class="overline">VIDEO BIJ DIT ONDERWERP</p>
-          <h2>Lossy en lossless compressie</h2>
-          <p>Deze video behandelt het verschil tussen compressie waarbij informatie behouden blijft en compressie waarbij een deel wordt weggehaald. Dat is de belangrijkste afweging bij het kleiner maken van afbeeldingen.</p>
-          <p class="watch-note"><strong>Voor je inlevert:</strong> bekijk de video zelf en pas deze toelichting aan als dat nodig is. Zo klopt het met jouw eigen ervaring.</p>
-          <p class="secondary-video"><a href="https://www.youtube.com/watch?v=U-X_rosRORg" target="_blank" rel="noopener">Extra: video over bitmap versus vector ↗</a></p>
+            <div class="compare-grid">
+                <article class="compare-card">
+                    <div class="compare-art">
+                        <img src="afbeeldingen/compressie.svg" alt="Pixels in een raster" />
+                    </div>
+                    <span class="category">BITMAP / RASTER</span>
+                    <h3>Opgebouwd uit pixels</h3>
+                    <p>Een bitmap bestaat uit een raster van gekleurde pixels. Foto's worden vaak als bitmap opgeslagen. Bij ver inzoomen kunnen de pixels zichtbaar worden.</p>
+                    <p class="formats">VOORBEELDEN: JPG · PNG · WEBP</p>
+                </article>
+
+                <article class="compare-card">
+                    <div class="compare-art vector-demo">
+                        <svg viewBox="0 0 240 140" role="img" aria-label="Een vloeiende vectorcirkel">
+                            <circle cx="120" cy="70" r="46" fill="none" stroke="#d8ff00" stroke-width="8"/>
+                            <path d="M120 24V116M74 70H166" stroke="#d8ff00" stroke-opacity=".4"/>
+                            <circle cx="120" cy="70" r="5" fill="#d8ff00"/>
+                        </svg>
+                    </div>
+                    <span class="category">VECTOR</span>
+                    <h3>Opgebouwd uit vormen</h3>
+                    <p>Een vectorbestand beschrijft lijnen, vormen en curves. Je kunt zo'n afbeelding groter maken zonder dat de randen blokkerig worden.</p>
+                    <p class="formats">VOORBEELDEN: SVG · AI · EPS</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="contrast">
+            <div class="wrap">
+                <p class="eyebrow">02 / COMPRESSIE</p>
+                <h2>Minder gegevens<br>in een bestand.</h2>
+                <p class="section-intro">Compressie kan opslagruimte besparen en bestanden sneller verstuurbaar maken.</p>
+
+                <div class="two-notes">
+                    <article class="info-card">
+                        <p class="eyebrow">LOSSLESS</p>
+                        <h3>Geen gegevens kwijt</h3>
+                        <p>Bij lossless compressie kun je na het uitpakken de oorspronkelijke gegevens terugkrijgen. PNG is een voorbeeld van een veelgebruikt afbeeldingsformaat met lossless compressie.</p>
+                    </article>
+                    <article class="info-card">
+                        <p class="eyebrow">LOSSY</p>
+                        <h3>Een deel verdwijnt</h3>
+                        <p>Bij lossy compressie wordt informatie weggehaald om het bestand kleiner te maken. Daardoor kan de kwaliteit afnemen. JPEG gebruikt meestal lossy compressie.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video over compressie -->
+        <section class="section wrap">
+            <div class="video-layout">
+                <div class="video-text">
+                    <p class="eyebrow">03 / VIDEO</p>
+                    <h2>Lossy en lossless compressie</h2>
+                    <p>Deze video vergelijkt manieren om gegevens kleiner op te slaan. Dat past bij het verschil tussen bestanden kleiner maken zonder informatieverlies en comprimeren waarbij informatie verdwijnt.</p>
+                    <p class="note">Bekijk hem zelf en noteer een voorbeeld dat de maker gebruikt.</p>
+                </div>
+                <div class="video-frame">
+                    <iframe src="https://www.youtube-nocookie.com/embed/rSY-3lT70SM"
+                        title="Understanding data compression: lossy and lossless"
+                        loading="lazy" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="section wrap source-box">
+            <p class="eyebrow">BRONNEN UIT DE LES</p>
+            <a href="https://docs.google.com/document/d/1275NMvpd4P2Xyukf5Q8aAHoPBDTrm3UaNu_ZU5gftt0/edit" target="_blank" rel="noopener">Lesdocument bitmap en vector ↗</a>
+            <a href="https://docs.google.com/document/d/1aVCjjrhXp-HPcUnyyT_N1tM7_H27XgsYdnL5v3e4Dk0/edit" target="_blank" rel="noopener">Lesdocument compressie ↗</a>
+            <a href="https://www.w3schools.com/html/default.asp" target="_blank" rel="noopener">W3Schools — HTML Tutorial ↗</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrap footer-inner">
+            <a class="footer-logo" href="index.html">B<span>/</span></a>
+            <span>Benjamin · Informatica · 2026</span>
+            <a href="#top">Terug naar boven ↑</a>
         </div>
-        <div class="video-frame">
-          <iframe src="https://www.youtube-nocookie.com/embed/2Qo5prktYNQ" title="Lossy en lossless compressie" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-      </div>
-    </section>
-  </main>
-  <!-- Kleine voettekst onderaan elke pagina -->
-  <footer class="site-footer">
-    <div class="shell footer-inner"><a class="footer-brand" href="index.html">B<span>.</span> / BENJAMIN</a><span>Eigen website · HAVO 4 · 2026</span><a href="#top">Terug naar boven ↑</a></div>
-  </footer>
-</body>
-</html><!DOCTYPE html>
-<html lang="nl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Uitleg over bitmap, vector en lossy en lossless compressie.">
-  <title>Compressie | Benjamin</title>
-  <!-- Alle pagina's gebruiken hetzelfde CSS-bestand -->
-  <link rel="stylesheet" href="opmaak.css">
-</head>
-<body id="top">
-    <!-- Hoofdnavigatie: de onderwerpen staan in een dropdownmenu -->
-    <header class="site-header">
-      <nav class="nav shell" aria-label="Hoofdnavigatie">
-        <a class="brand" href="index.html" aria-label="Benjamin, naar home"><span class="brand-mark">B<span>.</span></span><span><strong>BENJAMIN</strong><small>HAVO 4 / INFORMATICA</small></span></a>
-        <ul class="nav-main">
-          <li><a class="nav-home" href="index.html">Home</a></li>
-          <li class="nav-drop">
-            <details class="dropdown">
-              <summary>Onderwerpen <span aria-hidden="true">⌄</span></summary>
-              <ul class="dropdown-menu">
-                    <li><a href="invoer-verwerking-uitvoer.html">Invoer · verwerking · uitvoer</a></li>
-                    <li><a href="binairstelsel.html">Binair stelsel</a></li>
-                    <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
-                    <li><a href="compressie.html" aria-current="page">Compressie</a></li>
-                    <li><a href="ai.html">AI</a></li>
-              </ul>
-            </details>
-          </li>
-        </ul>
-        <a class="nav-note" href="index.html#over">Over deze site <span aria-hidden="true">↗</span></a>
-      </nav>
-    </header>
-  <main>
-    <section class="page-hero shell"><div><p class="overline"><span class="live-dot"></span> ONDERWERP 04</p><h1>Klein bestand.<br><span>Scherp beeld.</span></h1><p class="hero-lead">Afbeeldingen kunnen worden opgeslagen als bitmap of vector. Compressie helpt om minder opslagruimte te gebruiken.</p><div class="hero-actions"><a class="button button-lime" href="#verschil">Zie het verschil ↓</a></div></div><div class="page-art"><img src="afbeeldingen/compressie.svg" alt="Pixelraster wordt kleiner weergegeven"><span class="art-caption">PIXELS / PATHS / FILE SIZE</span></div></section>
-
-    <section class="section shell" id="verschil"><div class="section-head"><div><p class="overline">01 / TWEE SOORTEN</p><h2>Bitmap vs. vector.</h2></div><p class="section-intro">Ze kunnen allebei afbeeldingen tonen, maar ze slaan die informatie op een andere manier op.</p></div>
-      <div class="compare-grid"><article class="compare-card"><div class="compare-art bitmap-art"><span class="pixel pixel-a"></span><span class="pixel pixel-b"></span><span class="pixel pixel-c"></span><span class="pixel pixel-d"></span><span class="pixel pixel-e"></span><span class="pixel pixel-f"></span><span class="pixel pixel-g"></span><span class="pixel pixel-h"></span><span class="pixel pixel-i"></span></div><span class="card-tag">BITMAP / RASTER</span><h3>Opgebouwd uit pixels</h3><p>Een bitmapafbeelding bestaat uit een raster van gekleurde pixels. Foto's zijn meestal bitmaps. Als je ver inzoomt, zie je de losse pixels.</p><p class="format-line">VOORBEELDEN <b>JPG · PNG · WEBP</b></p></article><article class="compare-card"><div class="compare-art vector-art"><svg viewBox="0 0 240 135" role="img" aria-label="Scherpe cirkel als vector"><circle cx="120" cy="67" r="44" fill="none" stroke="#d8ff00" stroke-width="8"/><path d="M120 23V111M76 67H164" stroke="#d8ff00" stroke-opacity=".35" stroke-width="1.5"/><circle cx="120" cy="67" r="5" fill="#d8ff00"/></svg></div><span class="card-tag">VECTOR</span><h3>Opgebouwd uit vormen</h3><p>Vectorafbeeldingen beschrijven lijnen, vormen en curves met wiskundige informatie. Je kunt ze groter maken zonder dat de randen blokkerig worden.</p><p class="format-line">VOORBEELDEN <b>SVG · AI · EPS</b></p></article></div>
-    </section>
-
-    <section class="example-band"><div class="shell example-layout"><div><p class="overline">02 / COMPRESSIE</p><h2>Minder bytes, minder ruimte.</h2><p>Compressie verkleint de hoeveelheid data in een bestand. Dat kan helpen om bestanden sneller te versturen en pagina's sneller te laden.</p></div><div class="compression-types"><article><span>LOSSLESS</span><h3>Geen gegevens kwijt</h3><p>Na het uitpakken krijg je precies dezelfde gegevens terug. PNG is een veelgebruikt voorbeeld bij afbeeldingen.</p></article><article><span>LOSSY</span><h3>Een deel verdwijnt</h3><p>Er wordt informatie weggelaten om het bestand kleiner te maken. Bij JPEG kan daardoor kwaliteit verloren gaan.</p></article></div></div></section>
-
-    <!-- Ingesloten YouTube-video bij dit onderwerp -->
-    <section class="video-section shell">
-      <div class="section-kicker">KIJK / BEGRIJP</div>
-      <div class="video-layout">
-        <div class="video-copy">
-          <p class="overline">VIDEO BIJ DIT ONDERWERP</p>
-          <h2>Lossy en lossless compressie</h2>
-          <p>Deze video behandelt het verschil tussen compressie waarbij informatie behouden blijft en compressie waarbij een deel wordt weggehaald. Dat is de belangrijkste afweging bij het kleiner maken van afbeeldingen.</p>
-          <p class="watch-note"><strong>Voor je inlevert:</strong> bekijk de video zelf en pas deze toelichting aan als dat nodig is. Zo klopt het met jouw eigen ervaring.</p>
-          <p class="secondary-video"><a href="https://www.youtube.com/watch?v=U-X_rosRORg" target="_blank" rel="noopener">Extra: video over bitmap versus vector ↗</a></p>
-        </div>
-        <div class="video-frame">
-          <iframe src="https://www.youtube-nocookie.com/embed/2Qo5prktYNQ" title="Lossy en lossless compressie" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-      </div>
-    </section>
-  </main>
-  <!-- Kleine voettekst onderaan elke pagina -->
-  <footer class="site-footer">
-    <div class="shell footer-inner"><a class="footer-brand" href="index.html">B<span>.</span> / BENJAMIN</a><span>Eigen website · HAVO 4 · 2026</span><a href="#top">Terug naar boven ↑</a></div>
-  </footer>
+    </footer>
 </body>
 </html>
