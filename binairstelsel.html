@@ -1,64 +1,121 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Uitleg over binaire getallen en de Binary Bonanza-oefening.">
-  <title>Binair stelsel | Benjamin</title>
-  <!-- Alle pagina's gebruiken hetzelfde CSS-bestand -->
-  <link rel="stylesheet" href="opmaak.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binair stelsel — Benjamin</title>
+    <link rel="stylesheet" href="opmaak.css">
 </head>
 <body id="top">
-    <!-- Hoofdnavigatie: de onderwerpen staan in een dropdownmenu -->
-    <header class="site-header">
-      <nav class="nav shell" aria-label="Hoofdnavigatie">
-        <a class="brand" href="index.html" aria-label="Benjamin, naar home"><span class="brand-mark">B<span>.</span></span><span><strong>BENJAMIN</strong><small>HAVO 4 / INFORMATICA</small></span></a>
-        <ul class="nav-main">
-          <li><a class="nav-home" href="index.html">Home</a></li>
-          <li class="nav-drop">
-            <details class="dropdown">
-              <summary>Onderwerpen <span aria-hidden="true">⌄</span></summary>
-              <ul class="dropdown-menu">
-                    <li><a href="invoer-verwerking-uitvoer.html">Invoer · verwerking · uitvoer</a></li>
-                    <li><a href="binairstelsel.html" aria-current="page">Binair stelsel</a></li>
-                    <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
-                    <li><a href="compressie.html">Compressie</a></li>
-                    <li><a href="ai.html">AI</a></li>
-              </ul>
-            </details>
-          </li>
-        </ul>
-        <a class="nav-note" href="index.html#over">Over deze site <span aria-hidden="true">↗</span></a>
-      </nav>
+    <!-- Hetzelfde menu op iedere pagina -->
+    <header class="header">
+        <nav class="wrap nav">
+            <a class="logo" href="index.html">B<span>/</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="drop">
+                    <details>
+                        <summary>Onderwerpen <span>⌄</span></summary>
+                        <div class="drop-menu">
+                            <a href="invoer-verwerking-uitvoer.html">Invoer / verwerking / uitvoer</a>
+                            <a href="binairstelsel.html">Binair stelsel</a>
+                            <a href="kleurmodellen.html">Kleurmodellen</a>
+                            <a href="compressie.html">Compressie</a>
+                            <a href="ai.html">AI</a>
+                        </div>
+                    </details>
+                </li>
+                <li><a href="index.html#over">Over mij</a></li>
+            </ul>
+            <span class="nav-label">ONDERWERP 02</span>
+        </nav>
     </header>
-  <main>
-    <section class="page-hero shell"><div><p class="overline"><span class="live-dot"></span> ONDERWERP 02</p><h1>Alleen 0<br>en <span>1.</span></h1><p class="hero-lead">Het binaire stelsel gebruikt twee cijfers. Computers slaan informatie uiteindelijk op als bits, die twee mogelijke waarden hebben.</p><div class="hero-actions"><a class="button button-lime" href="#rekenen">Rekenvoorbeeld ↓</a><a class="inline-link" href="https://games.penjee.com/binary-bonanza/" target="_blank" rel="noopener">Speel Binary Bonanza ↗</a></div></div><div class="page-art"><img src="afbeeldingen/binair.svg" alt="Binaire cijfers in een raster"><span class="art-caption">BASE 2 / BINARY</span></div></section>
 
-    <section class="section shell" id="rekenen"><div class="section-head"><div><p class="overline">01 / HOE WERKT HET?</p><h2>Elke plek heeft waarde.</h2></div><p class="section-intro">In het decimale stelsel zijn de plaatswaarden 1, 10, 100 enzovoort. Bij binair zijn dat machten van 2.</p></div>
-      <div class="binary-work"><div class="bit-table" aria-label="Binaire omzetting van 1011 naar 11"><div><small>PLAATSWAARDE</small><strong>8</strong><strong>4</strong><strong>2</strong><strong>1</strong></div><div><small>BINair GETAL</small><strong class="on">1</strong><strong class="off">0</strong><strong class="on">1</strong><strong class="on">1</strong></div><div><small>UITKOMST</small><strong>8</strong><strong>0</strong><strong>2</strong><strong>1</strong></div></div><div class="binary-answer"><small>1011₂ IN DECIMAAL</small><strong>8 + 0 + 2 + 1 = 11</strong><p>Dus: <b>1011₂ = 11₁₀</b>. Alleen de plaatsen met een 1 tellen mee.</p></div></div>
-    </section>
+    <main>
+        <section class="page-hero wrap">
+            <div>
+                <p class="eyebrow"><span class="dot"></span> GETALLEN IN DE COMPUTER</p>
+                <h1>Alleen <span>0</span><br>en <span>1.</span></h1>
+                <p class="intro">
+                    Het binaire stelsel gebruikt twee cijfers. Elke positie
+                    heeft een waarde die een macht van 2 is.
+                </p>
+                <div class="actions">
+                    <a class="button" href="#rekenen">Bekijk het voorbeeld ↓</a>
+                </div>
+            </div>
+            <div class="page-art">
+                <img src="afbeeldingen/binair.svg" alt="Illustratie met binaire nullen en enen">
+                <p>BASE 2 / BINARY</p>
+            </div>
+        </section>
 
-    <section class="game-band"><div class="shell game-layout"><a class="game-image" href="https://games.penjee.com/binary-bonanza/" target="_blank" rel="noopener" aria-label="Open Binary Bonanza"><img src="afbeeldingen/binair.svg" alt="Binaire cijfers als afbeelding voor het spel Binary Bonanza"><span class="game-overlay">PLAY ↗</span></a><div><p class="overline">02 / OEFENEN</p><h2>Binary Bonanza</h2><p>Met dit spel oefen je om gewone getallen om te zetten naar binaire getallen. Je moet de juiste bits kiezen om op het getal uit te komen. Zo oefen je de plaatswaarden in plaats van alleen de uitleg te lezen.</p><a class="button button-lime" href="https://games.penjee.com/binary-bonanza/" target="_blank" rel="noopener">Open het spel ↗</a></div></div></section>
+        <section class="section wrap" id="rekenen">
+            <div class="section-heading">
+                <div><p class="eyebrow">01 / REKENEN</p><h2>Wat betekent 1011?</h2></div>
+                <p>Van rechts naar links zijn de plaatswaarden 1, 2, 4, 8, 16 enzovoort.</p>
+            </div>
 
-    <!-- Ingesloten YouTube-video bij dit onderwerp -->
-    <section class="video-section shell">
-      <div class="section-kicker">KIJK / BEGRIJP</div>
-      <div class="video-layout">
-        <div class="video-copy">
-          <p class="overline">VIDEO BIJ DIT ONDERWERP</p>
-          <h2>Binair omrekenen</h2>
-          <p>Deze video legt uit hoe je een binair getal omzet naar een gewoon getal en andersom. Dat sluit aan op het rekenvoorbeeld op deze pagina.</p>
-          <p class="watch-note"><strong>Voor je inlevert:</strong> bekijk de video zelf en pas deze toelichting aan als dat nodig is. Zo klopt het met jouw eigen ervaring.</p>
+            <div class="binary-box">
+                <div class="binary-table">
+                    <div><span>PLAATSWAARDE</span><b>8</b><b>4</b><b>2</b><b>1</b></div>
+                    <div><span>BINair GETAL</span><b class="lime">1</b><b>0</b><b class="lime">1</b><b class="lime">1</b></div>
+                    <div><span>WAARDE</span><b>8</b><b>0</b><b>2</b><b>1</b></div>
+                </div>
+                <div class="answer">
+                    <p class="eyebrow">DE UITKOMST</p>
+                    <strong>8 + 0 + 2 + 1 = 11</strong>
+                    <p>Dus <b>1011₂ = 11₁₀</b>. De plaatsen met een 1 tellen mee.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- De link naar het binaire spel zit in een afbeelding -->
+        <section class="contrast">
+            <div class="wrap game-layout">
+                <a class="game-image" href="https://games.penjee.com/binary-bonanza/" target="_blank" rel="noopener">
+                    <img src="afbeeldingen/binair.svg" alt="Klik om Binary Bonanza te openen">
+                    <span>OPEN SPEL ↗</span>
+                </a>
+                <div>
+                    <p class="eyebrow">02 / ZELF OEFENEN</p>
+                    <h2>Binary Bonanza.</h2>
+                    <p>Dit spel laat je oefenen met binaire getallen. Door het zelf te proberen, leer je sneller welke plaatswaarde bij elke 0 of 1 hoort.</p>
+                    <a class="button" href="https://games.penjee.com/binary-bonanza/" target="_blank" rel="noopener">Speel Binary Bonanza ↗</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video over binaire getallen -->
+        <section class="section wrap">
+            <div class="video-layout">
+                <div class="video-text">
+                    <p class="eyebrow">03 / VIDEO</p>
+                    <h2>Binary Numbers Explained</h2>
+                    <p>Deze uitleg behandelt binaire getallen en het omrekenen tussen binair en decimaal. Dat sluit aan bij het rekenvoorbeeld hierboven.</p>
+                    <p class="note">De video is Engelstalig. Bekijk hem zelf en noteer wat je nu beter begrijpt.</p>
+                </div>
+                <div class="video-frame">
+                    <iframe src="https://www.youtube-nocookie.com/embed/ImJSldHR0WA"
+                        title="Binary Numbers Explained for Beginners"
+                        loading="lazy" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="section wrap source-box">
+            <p class="eyebrow">BRONNEN</p>
+            <a href="https://games.penjee.com/binary-bonanza/" target="_blank" rel="noopener">Binary Bonanza — het oefenspel ↗</a>
+            <a href="https://www.w3schools.com/html/default.asp" target="_blank" rel="noopener">W3Schools — HTML Tutorial ↗</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrap footer-inner">
+            <a class="footer-logo" href="index.html">B<span>/</span></a>
+            <span>Benjamin · Informatica · 2026</span>
+            <a href="#top">Terug naar boven ↑</a>
         </div>
-        <div class="video-frame">
-          <iframe src="https://www.youtube-nocookie.com/embed/bQ5RcTE8_dE" title="Binair omrekenen" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-      </div>
-    </section>
-  </main>
-  <!-- Kleine voettekst onderaan elke pagina -->
-  <footer class="site-footer">
-    <div class="shell footer-inner"><a class="footer-brand" href="index.html">B<span>.</span> / BENJAMIN</a><span>Eigen website · HAVO 4 · 2026</span><a href="#top">Terug naar boven ↑</a></div>
-  </footer>
+    </footer>
 </body>
 </html>
