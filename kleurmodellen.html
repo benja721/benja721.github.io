@@ -1,0 +1,148 @@
+<!DOCTYPE html> <!-- pagina: Kleurmodellen -->
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kleurmodellen | Benjamin</title>
+  <link rel="stylesheet" type="text/css" href="opmaak.css">
+</head>
+<body>
+
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="overmij.html">Over mij</a></li>
+      <li class="dropdown actief"><a href="#">Informatica &#9662;</a>
+        <ul class="submenu">
+          <li><a href="ivo.html">Invoer, verwerking, uitvoer</a></li>
+          <li><a href="binairstelsel.html">Binair stelsel</a></li>
+          <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
+          <li><a href="compressie.html">Compressie</a></li>
+        </ul>
+      </li>
+      <li><a href="ai.html">AI</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="hero">
+      <p class="label">Informatica &middot; 3</p>
+      <h1>Kleurmodellen</h1>
+      <p>Een computer moet kleuren opslaan als getallen. Daarvoor gebruikt hij kleurmodellen. De twee bekendste zijn RGB (voor schermen) en CMYK (voor printers).</p>
+    </div>
+
+    <div class="blok">
+      <h2>RGB: rood, groen, blauw</h2>
+      <p>Een beeldscherm bestaat uit pixels. Elke pixel heeft drie lampjes: rood, groen en blauw. Door die lampjes helderder of zwakker te laten branden, ontstaan alle andere kleuren. RGB begint met een zwart scherm en voegt licht toe.</p>
+      <div class="tabel">
+        <table>
+          <tr><th>Kleur 1</th><th>Kleur 2</th><th>Kleur 3</th><th>Nieuwe kleur</th></tr>
+          <tr><td>-</td><td>-</td><td>-</td><td>Zwart</td></tr>
+          <tr><td>Rood</td><td>Groen</td><td>Blauw</td><td>Wit</td></tr>
+          <tr><td>Rood</td><td>Groen</td><td>-</td><td>Geel</td></tr>
+          <tr><td>Rood</td><td>Blauw</td><td>-</td><td>Magenta (paars)</td></tr>
+          <tr><td>Blauw</td><td>Groen</td><td>-</td><td>Turquoise (cyaan)</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="blok">
+      <h2>RGB-waardes: decimaal en hexadecimaal</h2>
+      <p>De hoeveelheid rood, groen en blauw is een getal van 0 t/m 255 (1 byte). Geel is bijvoorbeeld (255, 255, 0). In binair is dat (11111111, 11111111, 00000000). In hexadecimaal is 255 gelijk aan FF, dus geel is #FFFF00.</p>
+
+      <!-- Kleurvakjes: de kleur staat in style="background-color: ..." als hexadecimale code -->
+      <div class="kleuren">
+        <div class="kleurblok"><div class="vak" style="background-color:#FF0000"></div><p>Rood<br>255, 0, 0<br>#FF0000</p></div>
+        <div class="kleurblok"><div class="vak" style="background-color:#00FF00"></div><p>Groen<br>0, 255, 0<br>#00FF00</p></div>
+        <div class="kleurblok"><div class="vak" style="background-color:#0000FF"></div><p>Blauw<br>0, 0, 255<br>#0000FF</p></div>
+        <div class="kleurblok"><div class="vak" style="background-color:#FFFF00"></div><p>Geel<br>255, 255, 0<br>#FFFF00</p></div>
+        <div class="kleurblok"><div class="vak" style="background-color:#FF8000"></div><p>Oranje<br>255, 128, 0<br>#FF8000</p></div>
+        <div class="kleurblok"><div class="vak" style="background-color:#FF00FF"></div><p>Magenta<br>255, 0, 255<br>#FF00FF</p></div>
+        <div class="kleurblok"><div class="vak" style="background-color:#808080"></div><p>Grijs<br>128, 128, 128<br>#808080</p></div>
+        <div class="kleurblok"><div class="vak" style="background-color:#2BFF88"></div><p>Mijn groen<br>43, 255, 136<br>#2BFF88</p></div>
+      </div>
+    </div>
+
+    <!-- RGB-mixer met schuifjes -->
+    <div class="blok">
+      <h2>Probeer zelf: RGB-mixer</h2>
+      <div class="vak" id="mixvak"></div>
+      <p>Rood: <input type="range" id="rood" min="0" max="255" value="43"> <span id="roodwaarde">43</span></p>
+      <p>Groen: <input type="range" id="groen" min="0" max="255" value="255"> <span id="groenwaarde">255</span></p>
+      <p>Blauw: <input type="range" id="blauw" min="0" max="255" value="136"> <span id="blauwwaarde">136</span></p>
+      <p>Decimaal: <span class="uitvoer" id="decimaal"></span></p>
+      <p>Hexadecimaal: <span class="uitvoer" id="hexa"></span></p>
+    </div>
+
+    <div class="blok">
+      <h2>Zo gebruik ik kleur in mijn eigen code</h2>
+      <p>In mijn CSS-bestand staan de kleuren van mijn site als hexadecimale code. Bijvoorbeeld:</p>
+      <p class="uitvoer">color: #ffffff; &nbsp; background-color: #0e0e0e;</p>
+      <p><code>color</code> is de kleur van de tekst en <code>background-color</code> is de kleur van de achtergrond. Mijn groene accentkleur is <code>#2bff88</code>. In de CSS heb ik bij elke kleur commentaar gezet.</p>
+    </div>
+
+    <div class="blok">
+      <h2>CMYK: cyaan, magenta, geel, zwart</h2>
+      <p>Papier is wit. Bij printen voeg je dus kleur toe aan een witte achtergrond. Daarvoor gebruikt een printer het CMY-model: cyaan, magenta en geel. Een mix van deze drie geeft geen echt zwart, maar donkergrijs. Daarom komt er zwart (K van key/black) bij, en dat heet dan CMYK. Daarom zitten er in een printer vaak vier inktpatronen.</p>
+      <p>Een eenvoudige omrekening van RGB naar CMY is: <b>CMY = (255 - R, 255 - G, 255 - B)</b>.</p>
+      <div class="tabel">
+        <table>
+          <tr><th>Kleur</th><th>RGB</th><th>CMY</th></tr>
+          <tr><td>Rood</td><td>255, 0, 0</td><td>0, 255, 255</td></tr>
+          <tr><td>Blauw</td><td>0, 0, 255</td><td>255, 255, 0</td></tr>
+          <tr><td>Oranje</td><td>255, 128, 0</td><td>0, 127, 255</td></tr>
+          <tr><td>Magenta</td><td>255, 0, 255</td><td>0, 255, 0</td></tr>
+          <tr><td>Grijs</td><td>128, 128, 128</td><td>127, 127, 127</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="blok">
+      <h2>Video</h2>
+      <p>Klik op de afbeelding: <i>Images, Pixels and RGB</i>. Als je wilt oefenen, kun je ook de <a href="https://www.w3schools.com/colors/tryit.asp?filename=trycolors_rgbvalues" target="_blank">RGB-oefening van W3Schools</a> proberen.</p>
+      <a class="video" href="https://www.youtube.com/watch?v=15aqFQQVBWU" target="_blank">
+        <img src="https://img.youtube.com/vi/15aqFQQVBWU/hqdefault.jpg" alt="Video: Images, Pixels and RGB">
+      </a>
+      <p>[Vul hier in wat je van de video hebt geleerd.]</p>
+    </div>
+
+    <a class="knop" href="binairstelsel.html">&larr; Vorige</a>
+    <a class="knop" href="compressie.html">Volgende: compressie &rarr;</a>
+  </main>
+
+  <footer>
+    <p>Gemaakt door Benjamin &middot; informatica HAVO 4</p>
+  </footer>
+
+  <script>
+    // Deze functie leest de drie schuifjes en laat de kleur zien
+    function updateKleur() {
+      var r = Number(document.getElementById('rood').value);
+      var g = Number(document.getElementById('groen').value);
+      var b = Number(document.getElementById('blauw').value);
+
+      // een getal 0-255 omzetten naar 2 hexadecimale tekens (bijv. 255 wordt FF)
+      function naarHex(getal) {
+        var h = getal.toString(16).toUpperCase();
+        if (h.length < 2) { h = '0' + h; }
+        return h;
+      }
+      var hex = '#' + naarHex(r) + naarHex(g) + naarHex(b);
+
+      document.getElementById('roodwaarde').textContent = r;
+      document.getElementById('groenwaarde').textContent = g;
+      document.getElementById('blauwwaarde').textContent = b;
+      document.getElementById('mixvak').style.backgroundColor = hex; // kleurvlak aanpassen
+      document.getElementById('decimaal').textContent = r + ', ' + g + ', ' + b;
+      document.getElementById('hexa').textContent = hex;
+    }
+
+    // Bij elke beweging van een schuifje opnieuw uitrekenen
+    document.getElementById('rood').oninput = updateKleur;
+    document.getElementById('groen').oninput = updateKleur;
+    document.getElementById('blauw').oninput = updateKleur;
+    updateKleur();
+  </script>
+
+</body>
+</html>
